@@ -4,55 +4,55 @@
 }
 @font-face {
     font-family: 'Font2';
-    src: url('../fonts/Font%2010.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font3';
-    src: url('../fonts/Font%2011.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font4';
-    src: url('../fonts/Font%2012.otf') format('truetype');
-}
-@font-face {
-    font-family: 'Font5';
-    src: url('../fonts/Font%2013.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font6';
-    src: url('../fonts/Font%2014.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font7';
     src: url('../fonts/Font%202.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font8';
+    font-family: 'Font3';
     src: url('../fonts/Font%203.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font9';
+    font-family: 'Font4';
     src: url('../fonts/Font%204.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font10';
+    font-family: 'Font5';
     src: url('../fonts/Font%205.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font11';
+    font-family: 'Font6';
     src: url('../fonts/Font%206.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font12';
+    font-family: 'Font7';
     src: url('../fonts/Font%207.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font13';
+    font-family: 'Font8';
     src: url('../fonts/Font%208.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font14';
+    font-family: 'Font9';
     src: url('../fonts/Font%209.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font10';
+    src: url('../fonts/Font%2010.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font11';
+    src: url('../fonts/Font%2011.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font12';
+    src: url('../fonts/Font%2012.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Font13';
+    src: url('../fonts/Font%2013.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font14';
+    src: url('../fonts/Font%2014.ttf') format('truetype');
 }
 body {
     font-family: sans-serif;
