@@ -99,3 +99,50 @@ th.font-number-col, td:first-child {
     font-size: 1.8rem;
     word-wrap: break-word;
 }
+
+@media screen and (max-width: 768px) {
+    .sticky-header {
+        padding: 15px 20px;
+    }
+
+    .sticky-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .sticky-header label,
+    .sticky-header input {
+        font-size: 0.9rem;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background: #fefefe;
+    }
+
+    td {
+        border: none;
+        padding: 6px 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .font-preview {
+        font-size: 1.4rem;
+    }
+}
