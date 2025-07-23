@@ -135,15 +135,6 @@ th, td {
     font-family: 'Font10', sans-serif;
 }
 
-/* Intestazione sticky */
-thead th {
-    position: sticky;
-    top: 140px;
-    background-color: #f0f0f0; /* grigio chiaro */
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
-
 th.font-number-col,
 td:first-child {
     width: 120px;
@@ -213,9 +204,4 @@ td:first-child {
     .font-preview {
         font-size: 1.3rem;
     }
-
-    thead th {
-    top: 120px; /* o 130px se serve un po’ più di margine */
-    }
-
 }
