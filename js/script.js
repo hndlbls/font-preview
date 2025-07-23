@@ -1,3 +1,4 @@
+/* ====== TRADUZIONI ====== */
 const translations = {
   en: {
     title: "Font Preview",
@@ -41,25 +42,42 @@ const translations = {
   }
 };
 
-function updateLanguage(lang) {
-  const t = translations[lang] || translations["en"];
-  document.getElementById("page-title").textContent = t.title;
-  document.getElementById("input-label").textContent = t.inputLabel;
-  document.getElementById("userText").placeholder = t.inputPlaceholder;
-  document.getElementById("col-font").textContent = t.colFont;
-  document.getElementById("col-preview").textContent = t.colPreview;
-  document.getElementById("contact-text").innerHTML = t.contactText;
+/* ====== RIFERIMENTI DOM ====== */
+const textInput   = document.getElementById('userText');
+const previewCells = document.querySelectorAll('.font-preview');
+const langSelect  = document.getElementById('langSelector');
+
+/* ====== FUNZIONI ====== */
+function updatePreviews() {
+  const txt = textInput.value.trim() || textInput.placeholder;
+  previewCells.forEach(cell => cell.textContent = txt);
 }
 
-document.getElementById("langSelector").addEventListener("change", (e) => {
-  updateLanguage(e.target.value);
-  localStorage.setItem("preferredLang", e.target.value);
+function updateLanguage(lang) {
+  const t = translations[lang] || translations.en;
+  document.getElementById('page-title').textContent = t.title;
+  document.getElementById('input-label').textContent = t.inputLabel;
+  textInput.placeholder = t.inputPlaceholder;
+  document.getElementById('col-font').textContent = t.colFont;
+  document.getElementById('col-preview').textContent = t.colPreview;
+  document.getElementById('contact-text').innerHTML = t.contactText;
+  updatePreviews(); // Mantiene sincronizzato il testo mostrato
+}
+
+/* ====== EVENTI ====== */
+textInput.addEventListener('input', updatePreviews);
+
+langSelect.addEventListener('change', e => {
+  const lang = e.target.value;
+  localStorage.setItem('preferredLang', lang);
+  updateLanguage(lang);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLang");
-  const browserLang = navigator.language.slice(0, 2).toLowerCase();
-  const defaultLang = savedLang || (["it", "de", "fr", "es"].includes(browserLang) ? browserLang : "en");
-  document.getElementById("langSelector").value = defaultLang;
+/* ====== INIT ====== */
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('preferredLang');
+  const browserLang = navigator.language.slice(0,2).toLowerCase();
+  const defaultLang = savedLang || (["it","de","fr","es"].includes(browserLang) ? browserLang : "en");
+  langSelect.value = defaultLang;
   updateLanguage(defaultLang);
 });
