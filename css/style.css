@@ -1,65 +1,70 @@
+/* ========= @font-face (14 font) ========= */
 @font-face {
     font-family: 'Font1';
-    src: url('../fonts/Font%201.ttf') format('truetype');
+    src: url('../fonts/Font 1.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font2';
-    src: url('../fonts/Font%202.ttf') format('truetype');
+    src: url('../fonts/Font 2.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font3';
-    src: url('../fonts/Font%203.ttf') format('truetype');
+    src: url('../fonts/Font 3.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font4';
-    src: url('../fonts/Font%204.ttf') format('truetype');
+    src: url('../fonts/Font 4.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font5';
-    src: url('../fonts/Font%205.ttf') format('truetype');
+    src: url('../fonts/Font 5.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font6';
-    src: url('../fonts/Font%206.ttf') format('truetype');
+    src: url('../fonts/Font 6.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font7';
-    src: url('../fonts/Font%207.ttf') format('truetype');
+    src: url('../fonts/Font 7.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font8';
-    src: url('../fonts/Font%208.ttf') format('truetype');
+    src: url('../fonts/Font 8.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font9';
-    src: url('../fonts/Font%209.ttf') format('truetype');
+    src: url('../fonts/Font 9.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font10';
-    src: url('../fonts/Font%2010.ttf') format('truetype');
+    src: url('../fonts/Font 10.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font11';
-    src: url('../fonts/Font%2011.ttf') format('truetype');
+    src: url('../fonts/Font 11.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font12';
-    src: url('../fonts/Font%2012.otf') format('truetype');
+    src: url('../fonts/Font 12.otf') format('opentype');
 }
 @font-face {
     font-family: 'Font13';
-    src: url('../fonts/Font%2013.ttf') format('truetype');
+    src: url('../fonts/Font 13.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font14';
-    src: url('../fonts/Font%2014.ttf') format('truetype');
+    src: url('../fonts/Font 14.ttf') format('truetype');
 }
+
+/* ========= BASE / DESKTOP ========= */
 body {
     font-family: 'Font10', sans-serif;
     background-color: #ffffff;
     padding: 0;
     margin: 0;
 }
+
+/* Header sticky */
 .sticky-header {
     position: sticky;
     top: 0;
@@ -80,6 +85,8 @@ body {
     width: 100%;
     max-width: 600px;
 }
+
+/* Contenitore tabella */
 .table-container {
     padding: 0 20px;
     display: flex;
@@ -87,7 +94,7 @@ body {
 }
 table {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1000px;          /* Limita la larghezza su desktop */
     border-collapse: collapse;
     margin-top: 30px;
     table-layout: fixed;
@@ -97,15 +104,22 @@ th, td {
     padding: 12px;
     text-align: left;
     vertical-align: middle;
+    font-family: 'Font10', sans-serif;   /* testi di servizio */
 }
-th.font-number-col, td:first-child {
-    width: 220px;
+th.font-number-col,
+td:first-child {
+    width: 220px;               /* colonna numeri fissa */
     white-space: nowrap;
 }
+
+/* Celle anteprima */
 .font-preview {
-    font-size: 1.8rem;
+    font-size: 1.8rem;          /* ~1.5x più grande */
     word-wrap: break-word;
+    font-family: inherit;       /* verrà impostato inline per ogni riga */
 }
+
+/* Stile "Font N" con numero cerchiato */
 .font-label {
     font-size: 1rem;
     display: flex;
@@ -115,7 +129,7 @@ th.font-number-col, td:first-child {
 .font-circle {
     display: inline-block;
     background-color: #b289a3;
-    color: white;
+    color: #ffffff;
     font-weight: bold;
     width: 28px;
     height: 28px;
@@ -125,59 +139,40 @@ th.font-number-col, td:first-child {
     font-size: 1rem;
 }
 
-/* Responsive */
+/* ========= MOBILE / TABLET ========= */
 @media screen and (max-width: 768px) {
     .sticky-header {
-        padding: 15px 20px;
+        padding: 12px 16px;
     }
-
     .sticky-header h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
-
     .sticky-header label,
     .sticky-header input {
         font-size: 0.9rem;
+        max-width: 100%;
     }
 
-    table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
+    .table-container {
+        padding: 0 10px;
+        overflow-x: auto;       /* scroll orizzontale se strettissimo */
     }
 
-    thead {
-        display: none;
+    table {
+        max-width: 650px;       /* compattiamo la tabella */
     }
 
-    tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        padding: 10px;
-        background: #fefefe;
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
     }
 
-    td {
-        border: none;
-        padding: 6px 0;
-    }
-
-    
-td::before {
-    font-family: 'Font10', sans-serif;
-
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 2px;
+    th.font-number-col,
+    td:first-child {
+        width: 110px;           /* colonna numeri più stretta su mobile */
     }
 
     .font-preview {
-        font-size: 1.4rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    td.font-preview::before {
-        font-family: 'Font10', sans-serif !important;
+        font-size: 1.3rem;
     }
 }
