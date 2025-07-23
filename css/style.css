@@ -75,9 +75,12 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .header-logo {
@@ -88,7 +91,6 @@ body {
     display: block;
 }
 
-/* Colonna destra: titolo + input */
 .header-content {
     flex: 1;
     display: flex;
@@ -132,9 +134,19 @@ th, td {
     vertical-align: middle;
     font-family: 'Font10', sans-serif;
 }
+
+/* Intestazione sticky */
+thead th {
+    position: sticky;
+    top: 140px; /* altezza header totale */
+    background-color: #ffffff;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
 th.font-number-col,
 td:first-child {
-    width: 220px;
+    width: 120px;
     white-space: nowrap;
 }
 
@@ -199,5 +211,9 @@ td:first-child {
 
     .font-preview {
         font-size: 1.3rem;
+    }
+
+    thead th {
+        top: 180px; /* aumenta per accomodare header mobile più alto */
     }
 }
