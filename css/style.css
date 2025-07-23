@@ -147,7 +147,8 @@ thead th {
 th.font-number-col,
 td:first-child {
     width: 120px;
-    white-space: nowrap;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .font-preview {
