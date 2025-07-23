@@ -181,4 +181,9 @@ td:first-child {
     .font-preview {
         font-size: 1.3rem;
     }
+
+    .logo {
+    max-height: 60px;
+    margin-bottom: 12px;
+    }
 }
