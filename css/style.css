@@ -161,7 +161,10 @@ th.font-number-col, td:first-child {
         padding: 6px 0;
     }
 
-    td::before {
+    
+td::before {
+    font-family: 'Font10', sans-serif;
+
         content: attr(data-label);
         font-weight: bold;
         display: block;
@@ -170,5 +173,11 @@ th.font-number-col, td:first-child {
 
     .font-preview {
         font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    td.font-preview::before {
+        font-family: 'Font10', sans-serif !important;
     }
 }
