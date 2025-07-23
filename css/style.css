@@ -215,6 +215,7 @@ td:first-child {
     }
 
     thead th {
-        top: 180px; /* aumenta per accomodare header mobile più alto */
+    top: 120px; /* o 130px se serve un po’ più di margine */
     }
+
 }
