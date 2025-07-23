@@ -217,18 +217,50 @@ td:first-child {
     }
 }
 
+.contact-box {
+  background-color: #AA829F;
+  color: white;
+  font-family: 'Font10', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 4px;
+  max-width: 1000px;
+  margin: 40px auto 60px;
+  box-sizing: border-box;
+}
+.contact-icon {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .contact-icon {
+    margin: 0 0 15px 0;
+  }
+}
+
+
 /* ========= SCALING PER FONT ========= */
 .font-preview[data-font="Font1"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font2"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font3"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font4"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font4"] { transform: scale(0.9); transform-origin: left center; }
 .font-preview[data-font="Font5"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font6"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font7"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font8"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font8"] { transform: scale(1.8); transform-origin: left center; }
 .font-preview[data-font="Font9"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font10"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font11"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font12"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font12"] { transform: scale(1.5); transform-origin: left center; }
 .font-preview[data-font="Font13"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font14"] { transform: scale(1); transform-origin: left center; }
