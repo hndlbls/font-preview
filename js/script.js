@@ -1,4 +1,4 @@
-/* ====== TRADUZIONI ====== */
+/*  ====== TRADUZIONI ====== */
 const translations = {
   en: {
     title: "Font Preview",
