@@ -92,6 +92,11 @@ body {
     margin-right: auto;
 }
 
+.logo {
+    max-height: 60px;
+    margin-bottom: 12px;
+    }
+
 /* Contenitore tabella */
 .table-container {
     padding: 0 20px;
@@ -182,8 +187,4 @@ td:first-child {
         font-size: 1.3rem;
     }
 
-    .logo {
-    max-height: 60px;
-    margin-bottom: 12px;
-    }
 }
