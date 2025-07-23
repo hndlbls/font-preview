@@ -91,6 +91,15 @@ body {
     display: block;
 }
 
+.lang-right select {
+  margin-top: 12px;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
 .header-content {
     flex: 1;
     display: flex;
