@@ -330,3 +330,21 @@ td:first-child {
   font-size:20px;
 }
 
+
+/* === Font Code column header and cells === */
+th#col-font {
+  color: #a8809d;
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  border-right: none;
+  text-align: center;
+}
+td.font-code-cell {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  border-right: none;
+  text-align: center;
+}
+
