@@ -1,64 +1,65 @@
 /* ========= @font-face (14 font) ========= */
 @font-face {
-    font-family: 'Font1';
-    src: url('../fonts/Font 1.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font2';
-    src: url('../fonts/Font 2.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font3';
-    src: url('../fonts/Font 3.ttf') format('truetype');
-}
-@font-face {
     font-family: 'Font4';
     src: url('../fonts/Font 4.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font5';
-    src: url('../fonts/Font 5.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font6';
-    src: url('../fonts/Font 6.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font7';
-    src: url('../fonts/Font 7.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Font8';
     src: url('../fonts/Font 8.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font9';
-    src: url('../fonts/Font 9.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font10';
-    src: url('../fonts/Font 10.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Font11';
-    src: url('../fonts/Font 11.ttf') format('truetype');
-}
-@font-face {
     font-family: 'Font12';
-    src: url('../fonts/Font 12.otf') format('opentype');
+    src: url('../fonts/Font 12.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font13';
-    src: url('../fonts/Font 13.ttf') format('truetype');
+    font-family: 'Font16';
+    src: url('../fonts/Font 16.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Font14';
-    src: url('../fonts/Font 14.ttf') format('truetype');
+    font-family: 'Font20';
+    src: url('../fonts/Font 20.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Font24';
+    src: url('../fonts/Font 24.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font28';
+    src: url('../fonts/Font 28.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font32';
+    src: url('../fonts/Font 32.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font36';
+    src: url('../fonts/Font 36.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font40';
+    src: url('../fonts/Font 40.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font44';
+    src: url('../fonts/Font 44.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font48';
+    src: url('../fonts/Font 48.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font52';
+    src: url('../fonts/Font 52.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Font56';
+    src: url('../fonts/Font 56.ttf') format('truetype');
+}
+
 
 /* ========= BASE ========= */
 body {
-    font-family: 'Font10', sans-serif;
+    font-family: 'Font40', sans-serif;
     background-color: #ffffff;
     padding: 0;
     margin: 0;
@@ -148,7 +149,7 @@ th, td {
     padding: 12px;
     text-align: left;
     vertical-align: middle;
-    font-family: 'Font10', sans-serif;
+    font-family: 'Font40', sans-serif;
 }
 
 th {
@@ -229,7 +230,7 @@ td:first-child {
 .contact-box {
   background-color: #AA829F;
   color: white;
-  font-family: 'Font10', sans-serif;
+  font-family: 'Font40', sans-serif;
   display: flex;
   align-items: center;
   padding: 20px 30px;
@@ -259,17 +260,17 @@ td:first-child {
 
 
 /* ========= SCALING PER FONT ========= */
-.font-preview[data-font="Font1"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font2"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font3"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font4"] { transform: scale(0.9); transform-origin: left center; }
-.font-preview[data-font="Font5"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font6"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font7"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font8"] { transform: scale(1.8); transform-origin: left center; }
-.font-preview[data-font="Font9"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font10"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font11"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font12"] { transform: scale(1.5); transform-origin: left center; }
-.font-preview[data-font="Font13"] { transform: scale(1); transform-origin: left center; }
-.font-preview[data-font="Font14"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font4"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font8"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font12"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font16"] { transform: scale(0.9); transform-origin: left center; }
+.font-preview[data-font="Font20"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font24"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font28"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font32"] { transform: scale(1.8); transform-origin: left center; }
+.font-preview[data-font="Font36"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font40"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font44"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font48"] { transform: scale(1.5); transform-origin: left center; }
+.font-preview[data-font="Font52"] { transform: scale(1); transform-origin: left center; }
+.font-preview[data-font="Font56"] { transform: scale(1); transform-origin: left center; }
