@@ -5,7 +5,7 @@ const translations = {
     inputLabel: "Type your text below to preview available fonts:",
     inputPlaceholder: "Type your text...",
     sample: "Your text here",
-    colFont: "Font Number",
+    colFont: "Font Code",
     colPreview: "Text Preview",
     contactText: `<strong>Didn’t find the perfect font?</strong><br>Feel free to contact us — we’ll be happy to add it for you!`
   },
@@ -14,7 +14,7 @@ const translations = {
     inputLabel: "Scrivi qui il tuo testo per vedere l'anteprima dei font disponibili:",
     inputPlaceholder: "Inserisci la tua scritta...",
     sample: "La tua scritta qui",
-    colFont: "Numero Font",
+    colFont: "Codice Font",
     colPreview: "Anteprima Testo",
     contactText: `<strong>Non hai trovato il font perfetto?</strong><br>Contattaci e saremo felici di aggiungerlo per te!`
   },
@@ -23,7 +23,7 @@ const translations = {
     inputLabel: "Geben Sie Ihren Text ein, um die verfügbaren Schriftarten anzuzeigen:",
     inputPlaceholder: "Geben Sie Ihren Text ein...",
     sample: "Ihr Text hier",
-    colFont: "Schriftnummer",
+    colFont: "Font-Code",
     colPreview: "Textvorschau",
     contactText: `<strong>Die perfekte Schriftart nicht gefunden?</strong><br>Kontaktieren Sie uns – wir fügen sie gerne hinzu!`
   },
@@ -32,7 +32,7 @@ const translations = {
     inputLabel: "Tapez votre texte pour prévisualiser les polices disponibles :",
     inputPlaceholder: "Tapez votre texte...",
     sample: "Votre texte ici",
-    colFont: "Numéro de Police",
+    colFont: "Code de police",
     colPreview: "Aperçu du Texte",
     contactText: `<strong>Vous n'avez pas trouvé la police parfaite ?</strong><br>N'hésitez pas à nous contacter — nous serons ravis de l'ajouter !`
   },
@@ -41,7 +41,7 @@ const translations = {
     inputLabel: "Escribe tu texto para previsualizar las fuentes disponibles:",
     inputPlaceholder: "Escribe tu texto...",
     sample: "Tu texto aquí",
-    colFont: "Número de Fuente",
+    colFont: "Código de fuente",
     colPreview: "Vista previa del texto",
     contactText: `<strong>¿No encontraste la fuente perfecta?</strong><br>Contáctanos y estaremos encantados de añadirla.`
   }
@@ -73,7 +73,10 @@ function updateLanguage(lang) {
   document.getElementById('col-preview').textContent = t.colPreview;
   document.getElementById('contact-text').innerHTML = t.contactText;
 
-  // Placeholder
+  
+  // Aggiorna data-label della prima colonna nelle righe
+  document.querySelectorAll("td.font-code-cell").forEach(td => td.setAttribute("data-label", t.colFont));
+// Placeholder
   textInput.placeholder = t.inputPlaceholder;
 
   // Se l'utente NON ha digitato oppure il valore è uno dei default, aggiorna anche il value
