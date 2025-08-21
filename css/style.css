@@ -274,3 +274,59 @@ td:first-child {
 .font-preview[data-font="Font48"] { transform: scale(1.5); transform-origin: left center; }
 .font-preview[data-font="Font52"] { transform: scale(1); transform-origin: left center; }
 .font-preview[data-font="Font56"] { transform: scale(1); transform-origin: left center; }
+
+
+/* Esagono con clip-path */
+  -webkit-clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+          clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  background: #b184a2; /* tono mauve */
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0;
+  box-shadow: inset 0 0 0 8px #ffffff; /* bordo interno bianco */
+}
+@media (max-width: 640px){
+  .hex-badge{
+    --hex-size: 44px;
+    font-size: 16px;
+    box-shadow: inset 0 0 0 6px #ffffff;
+  }
+}
+/* Centra meglio il testo su Safari/Firefox */
+.hex-badge::before{ content: ""; }
+
+
+/* ===== Hex badge with image background ===== */
+.hex-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:60px;
+  height:60px;
+  background-image:url('../img/exagon.png');
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  color:#ffffff;
+  font-weight:800;
+  font-size:18px;
+  line-height:1;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  user-select:text;
+}
+@media (max-width: 640px){
+  .hex-badge{ font-size:16px; }
+}
+/* Se serve una versione compatta in alcune tabelle */
+.hex-badge.sm{
+  width:51px;
+  height:51px;
+  font-size:16px;
+}
+
